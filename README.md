@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ InstaShield — Fake Account & News Detector
 
-## Getting Started
+InstaShield is a premium, AI-powered web application built with **Next.js 15+**, **React 19**, and **Framer Motion**. It provides real-time behavioral and heuristic analysis to identify fake social media profiles (across Instagram, Facebook, and X/Twitter) as well as fake news and sensationalism.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+To run the application locally on your machine, follow these steps:
+
+### 1. Install Dependencies
+Before running the server, make sure you have all required npm packages installed. Run this in your project root directory:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Start the Development Server
+Run the following command to start the Next.js development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Open in Browser
+Once the server is running, open your browser and navigate to:
+👉 **[http://localhost:3000](http://localhost:3000)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔍 Troubleshooting: "Nothing is Loading / Blank Page"
 
-To learn more about Next.js, take a look at the following resources:
+If you open the localhost link and nothing is loading, please check the following solutions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Check the Terminal Port Output
+If port `3000` is already occupied by another process, Next.js will automatically fall back to another port (such as `3001`, `3002`, etc.). 
+- Look closely at your terminal output after running `npm run dev`.
+- Find the line that looks like: `▲ Local: http://localhost:3001`
+- Open the exact URL displayed in your terminal.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Make Sure Dependencies are Installed
+If you run `npm run dev` and get command errors, or if files fail to load, ensure you ran `npm install` first. If issues persist, try clean installing:
+```bash
+rm -rf node_modules .next
+npm install
+```
 
-## Deploy on Vercel
+### 3. Node.js Version Compatibility
+This project runs on React 19 and Next.js 15+. It requires **Node.js 18.17.0** or newer. Check your Node version using:
+```bash
+node -v
+```
+*(If your version is older, please update Node.js).*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Clear Browser Cache
+Sometimes, local development server caching can prevent pages from loading correctly.
+- Press `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac) to perform a hard refresh.
+- Alternatively, try opening the link in an **Incognito / Private Window**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Built With
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router & Turbopack)
+- **Styling**: Vanilla CSS, TailwindCSS, & Glassmorphism design tokens
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
